@@ -44,7 +44,7 @@ $(document).on('turbolinks:load', function(){
     $("#points-container").html('')
     $("#submission-points").val(0)
     for (var i = 1; i <= points[parseInt($("#dropdown").val())]; i++) {
-      $("#points-container").append('<input type="checkbox" id="checkbox-' + i + '"> Exercise ' + i +'</input><br>')
+      $("#points-container").append('<label><input type="checkbox" id="checkbox-' + i + '"/> Exercise ' + i +'</label><br>')
       $('#checkbox-' + i).on("change", onCheckboxChecked);
     }
   }
